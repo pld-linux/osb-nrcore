@@ -3,7 +3,7 @@ Summary:	GTK-Webcore Core library
 Name:		osb-nrcore
 Version:	0.5.0
 Release:	0.1
-License:	GPL?
+License:	GPL
 Group:		Development/Libraries
 Source0:	http://dl.sourceforge.net/gtk-webcore/%{name}-%{version}.tar.gz
 # Source0-md5:	16d9a9a322025cae1a7fe8225690695a
@@ -36,27 +36,12 @@ Static osb-nrcore library.
 %setup -q
 
 %build
-# if ac/am/* rebuilding is necessary, do it in this order and add
-# appropriate BuildRequires
-#%%{__gettextize}
-#%%{__libtoolize}
-#%%{__aclocal}
-#%%{__autoconf}
-#%%{__autoheader}
-#%%{__automake}
-#cp -f /usr/share/automake/config.sub .
 %configure
 %{__make}
 
-#%{__make} \
-#	CFLAGS="%{rpmcflags}" \
-#	LDFLAGS="%{rpmldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-# create directories if necessary
-#install -d $RPM_BUILD_ROOT
-#install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
