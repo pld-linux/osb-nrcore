@@ -1,36 +1,51 @@
-#
 Summary:	GTK-Webcore Core library
+Summary(pl):	G³ówna biblioteka GTK-Webcore
 Name:		osb-nrcore
 Version:	0.5.0
 Release:	0.1
-License:	GPL
-Group:		Development/Libraries
+License:	LGPL
+Group:		Libraries
 Source0:	http://dl.sourceforge.net/gtk-webcore/%{name}-%{version}.tar.gz
 # Source0-md5:	16d9a9a322025cae1a7fe8225690695a
 URL:		http://gtk-webcore.sourceforge.net/
-BuildRequires:	gtk+2-devel
-BuildRequires:	osb-jscore-devel
+BuildRequires:	gtk+2-devel >= 2:2.2.0
+BuildRequires:	libxml2-devel >= 1:2.6.0
+BuildRequires:	osb-jscore-devel >= 0.4.0
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-GTK Webcore Core library
+GTK-Webcore Core library.
+
+%description -l pl
+G³ówna biblioteka GTK-Webcore.
 
 %package devel
-Summary:	Development libraries and header files for osb-nrcore library
+Summary:	Header files for osb-nrcore library
+Summary(pl):	Pliki nag³ówkowe biblioteki osb-nrcore
 Group:		Development/Libraries
-#Requires:	%{name} = %{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
+Requires:	gtk+2-devel >= 2:2.2.0
+Requires:	libxml2-devel >= 1:2.6.0
+Requires:	osb-jscore-devel >= 0.4.0
 
 %description devel
-This is the package containing the development libraries and header
-files for osb-nrcore.
+This is the package containing the header files for osb-nrcore.
+
+%description devel -l pl
+Ten pakiet zawiera pliki nag³ówkowe biblioteki osb-nrcore
 
 %package static
 Summary:	Static osb-nrcore library
+Summary(pl):	Statyczna biblioteka osb-nrcore
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static osb-nrcore library.
+
+%description static -l pl
+Statyczna biblioteka osb-nrcore
 
 %prep
 %setup -q
@@ -54,20 +69,21 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README TODO
-%dir %{_includedir}/osb
-%{_includedir}/osb/NRCore
-%{_libdir}/libnrcore.so.0.0.0
-%{_libdir}/libnrcore_kwiq_gtk.so.0.0.0
+%doc README
+%attr(755,root,root) %{_libdir}/libnrcore.so.0.0.0
+%attr(755,root,root) %{_libdir}/libnrcore_kwiq_gtk.so.0.0.0
 %{_datadir}/%{name}
 
 %files devel
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libnrcore.so
 %{_libdir}/libnrcore.la
-%{_libdir}/libnrcore.so
+%attr(755,root,root) %{_libdir}/libnrcore_kwiq_gtk.so
 %{_libdir}/libnrcore_kwiq_gtk.la
-%{_libdir}/libnrcore_kwiq_gtk.so
-%{_libdir}/pkgconfig/osb-nrcore.pc
+%{_includedir}/osb/NRCore
+%{_pkgconfigdir}/osb-nrcore.pc
 
 %files static
+%defattr(644,root,root,755)
 %{_libdir}/libnrcore.a
 %{_libdir}/libnrcore_kwiq_gtk.a
