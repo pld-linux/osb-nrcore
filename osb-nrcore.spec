@@ -1,5 +1,5 @@
 Summary:	GTK-Webcore Core library
-Summary(pl):	G丑wna biblioteka GTK-Webcore
+Summary(pl.UTF-8):   G艂贸wna biblioteka GTK-Webcore
 Name:		osb-nrcore
 Version:	0.5.0
 Release:	0.1
@@ -17,12 +17,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 GTK-Webcore Core library.
 
-%description -l pl
-G丑wna biblioteka GTK-Webcore.
+%description -l pl.UTF-8
+G艂贸wna biblioteka GTK-Webcore.
 
 %package devel
 Summary:	Header files for osb-nrcore library
-Summary(pl):	Pliki nag丑wkowe biblioteki osb-nrcore
+Summary(pl.UTF-8):   Pliki nag艂贸wkowe biblioteki osb-nrcore
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtk+2-devel >= 2:2.2.0
@@ -32,19 +32,19 @@ Requires:	osb-jscore-devel >= 0.4.0
 %description devel
 This is the package containing the header files for osb-nrcore.
 
-%description devel -l pl
-Ten pakiet zawiera pliki nag丑wkowe biblioteki osb-nrcore
+%description devel -l pl.UTF-8
+Ten pakiet zawiera pliki nag艂贸wkowe biblioteki osb-nrcore
 
 %package static
 Summary:	Static osb-nrcore library
-Summary(pl):	Statyczna biblioteka osb-nrcore
+Summary(pl.UTF-8):   Statyczna biblioteka osb-nrcore
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static osb-nrcore library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka osb-nrcore
 
 %prep
