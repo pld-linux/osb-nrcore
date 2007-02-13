@@ -1,5 +1,5 @@
 Summary:	GTK-Webcore Core library
-Summary(pl.UTF-8):   Główna biblioteka GTK-Webcore
+Summary(pl.UTF-8):	Główna biblioteka GTK-Webcore
 Name:		osb-nrcore
 Version:	0.5.0
 Release:	0.1
@@ -22,7 +22,7 @@ Główna biblioteka GTK-Webcore.
 
 %package devel
 Summary:	Header files for osb-nrcore library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki osb-nrcore
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki osb-nrcore
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtk+2-devel >= 2:2.2.0
@@ -37,7 +37,7 @@ Ten pakiet zawiera pliki nagłówkowe biblioteki osb-nrcore
 
 %package static
 Summary:	Static osb-nrcore library
-Summary(pl.UTF-8):   Statyczna biblioteka osb-nrcore
+Summary(pl.UTF-8):	Statyczna biblioteka osb-nrcore
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
