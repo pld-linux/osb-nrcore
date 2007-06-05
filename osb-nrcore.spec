@@ -1,16 +1,16 @@
 Summary:	GTK-Webcore Core library
 Summary(pl.UTF-8):	Główna biblioteka GTK-Webcore
 Name:		osb-nrcore
-Version:	0.5.0
+Version:	0.5.2
 Release:	0.1
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/gtk-webcore/%{name}-%{version}.tar.gz
-# Source0-md5:	16d9a9a322025cae1a7fe8225690695a
+# Source0-md5:	4c1b8ab85e44fb96d09cb73b41ecaddb
 URL:		http://gtk-webcore.sourceforge.net/
 BuildRequires:	gtk+2-devel >= 2:2.2.0
 BuildRequires:	libxml2-devel >= 1:2.6.0
-BuildRequires:	osb-jscore-devel >= 0.4.0
+BuildRequires:	osb-jscore-devel >= 0.5.2
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
